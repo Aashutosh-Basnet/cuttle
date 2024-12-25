@@ -14,14 +14,16 @@
           >
             {{ signupButtonText }}
           </v-btn>
-          <img
-            id="logo"
-            alt="Cuttle logo"
-            :src="`/img/cuttle_logo_text_${logoColor}.svg`"
-            width="60"
-            height="60"
-            class="ma-md-auto desktop-logo"
-          >
+          <router-link :to="{ name: 'home' }" class="LinkToHomePage logo">
+            <img
+              id="logo"
+              alt="Cuttle logo"
+              :src="`/img/cuttle_logo_text_${logoColor}.svg`"
+              width="60"
+              height="60"
+              class="ma-md-auto desktop-logo"
+            >
+          </router-link>
         </div>
       </v-toolbar-title>
       <v-toolbar-items v-if="!smAndDown" class="hidden-xs">
